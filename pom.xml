@@ -4,7 +4,7 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.bivashy.learn.javaee</groupId>
+    <groupId>com.bivashy.learn.arduino</groupId>
     <artifactId>ArduinoToggleGUI</artifactId>
     <version>1.0-SNAPSHOT</version>
 
@@ -13,7 +13,33 @@
         <maven.compiler.target>17</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
-
+        <jserialcomm.version>2.11.0</jserialcomm.version>
+        <flatlaf.version>3.5.4</flatlaf.version>
+        <swing.version>21.0.4</swing.version>
+        <miglayout.version>11.4.2</miglayout.version>
     </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.fazecast</groupId>
+            <artifactId>jSerialComm</artifactId>
+            <version>${jserialcomm.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.openjfx</groupId>
+            <artifactId>javafx-swing</artifactId>
+            <version>${swing.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.formdev</groupId>
+            <artifactId>flatlaf</artifactId>
+            <version>${flatlaf.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.miglayout</groupId>
+            <artifactId>miglayout-swing</artifactId>
+            <version>${miglayout.version}</version>
+        </dependency>
+    </dependencies>
 
 </project>
