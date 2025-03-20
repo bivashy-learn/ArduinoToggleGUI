@@ -9,14 +9,13 @@
     <version>1.0-SNAPSHOT</version>
 
     <properties>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.source>8</maven.compiler.source>
+        <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
         <jserialcomm.version>2.11.0</jserialcomm.version>
         <flatlaf.version>3.5.4</flatlaf.version>
         <swing.version>21.0.4</swing.version>
-        <miglayout.version>11.4.2</miglayout.version>
     </properties>
 
     <dependencies>
@@ -34,11 +33,6 @@
             <groupId>com.formdev</groupId>
             <artifactId>flatlaf</artifactId>
             <version>${flatlaf.version}</version>
-        </dependency>
-        <dependency>
-            <groupId>com.miglayout</groupId>
-            <artifactId>miglayout-swing</artifactId>
-            <version>${miglayout.version}</version>
         </dependency>
     </dependencies>
 

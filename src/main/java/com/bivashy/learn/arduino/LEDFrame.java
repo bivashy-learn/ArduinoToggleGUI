@@ -3,9 +3,9 @@
  */
 package com.bivashy.learn.arduino;
 
+import java.awt.*;
 import com.bivashy.learn.arduino.model.ComPort;
 import javax.swing.*;
-import net.miginfocom.swing.*;
 
 import java.io.IOException;
 
@@ -32,6 +32,7 @@ public class LEDFrame extends JFrame {
             if (!controller.isStarted())
                 if (!enableSelectedPort()) {
                     JOptionPane.showMessageDialog(this, "Не удалось открыть порт или перезагрузите компьютер!");
+                    return;
                 }
             if (toggleButton1.isSelected())
                 controller.enable();
@@ -58,19 +59,13 @@ public class LEDFrame extends JFrame {
         toggleButton1 = new JToggleButton();
 
         //======== this ========
-        var contentPane = getContentPane();
-        contentPane.setLayout(new MigLayout(
-            "hidemode 3,align center center",
-            // columns
-            "[fill]",
-            // rows
-            "[]" +
-            "[]"));
-        contentPane.add(comboBox1, "cell 0 0");
+        Container contentPane = getContentPane();
+        contentPane.setLayout(new BoxLayout(contentPane, BoxLayout.Y_AXIS));
+        contentPane.add(comboBox1);
 
         //---- toggleButton1 ----
         toggleButton1.setText("LED");
-        contentPane.add(toggleButton1, "cell 0 1,align center center,grow 0 0");
+        contentPane.add(toggleButton1);
         pack();
         setLocationRelativeTo(getOwner());
         // JFormDesigner - End of component initialization  //GEN-END:initComponents  @formatter:on

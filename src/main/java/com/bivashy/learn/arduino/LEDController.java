@@ -6,6 +6,7 @@ import com.fazecast.jSerialComm.SerialPort;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 import static java.util.Objects.requireNonNull;
 
@@ -58,8 +59,8 @@ public class LEDController {
 
     public List<ComPort> availablePorts() {
         return Arrays.stream(SerialPort.getCommPorts())
-                .map(port -> new ComPort(port))
-                .toList();
+                .map(ComPort::new)
+                .collect(Collectors.toList());
     }
 
 }
